@@ -1,0 +1,36 @@
+= I, Human - Citation Guide
+:toc:
+
+== BibTeX
+
+[source,bibtex]
+----
+@software{I, Human_2026,
+  author = {Jewell, Jonathan},
+  title = {I, Human},
+  year = {2026},
+  url = {https://github.com/hyperpolymath/I, Human},
+  license = {PMPL-1.0-or-later}
+}
+----
+
+== Harvard Style
+
+Jewell, J.D.A. (2026) _I, Human_ [Computer software]. Available at: https://github.com/hyperpolymath/I, Human
+
+== OSCOLA
+
+Jonathan D.A. Jewell, 'I, Human' (2026) <https://github.com/hyperpolymath/I, Human>
+
+== MLA
+
+Jewell, Jonathan "I, Human." 2026, github.com/hyperpolymath/I, Human.
+
+== APA 7
+
+Jewell, J.D.A. (2026). _I, Human_ [Computer software]. GitHub. https://github.com/hyperpolymath/I, Human
+
+== See Also
+
+* link:../CITATION.cff[CITATION.cff]
+* link:../codemeta.json[codemeta.json]

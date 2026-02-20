@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: PMPL-1.0-or-later
+# Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+#
+# META.a2ml — Project meta-level information
+# Architecture decisions, design rationale, governance.
+
+[metadata]
+version = "0.1.0"
+last-updated = "2026-02-20"
+
+[project-info]
+type = "service"  # web application (frontend + backend)
+languages = ["elixir", "rescript", "nickel", "zig", "idris2"]
+license = "PMPL-1.0-or-later"
+author = "Jonathan D.A. Jewell (hyperpolymath)"
+
+[architecture-decisions]
+- { id = "ADR-001", title = "Use Elixir/Phoenix for backend", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-002", title = "Use ReScript for frontend logic (not TypeScript)", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-003", title = "Use SvelteKit for frontend framework", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-004", title = "Use ArangoDB for multi-model persistence (document + graph)", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-005", title = "Use LMDB for embedded caching (not Redis)", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-006", title = "Use Nickel for audit rule configuration", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-007", title = "Use Bandit as Phoenix web server (not Cowboy)", status = "accepted", date = "2026-02-20" }
+- { id = "ADR-008", title = "Use Deno as frontend runtime (not Node/Bun)", status = "accepted", date = "2026-02-20" }
+
+[development-practices]
+build-tool = "just"
+container-runtime = "podman"
+ci-platform = "github-actions"
+package-manager = "mix"  # Elixir backend
+frontend-runtime = "deno"  # Frontend build/dev
+
+[design-rationale]
+# Full-stack functional architecture: Elixir (backend) + ReScript (frontend)
+# ArangoDB chosen for graph capabilities (IP-fingerprint-session relationships)
+# LMDB chosen for zero-latency embedded cache (no Redis overhead)
+# Nickel decouples scoring rules from application code
+# Bandit for HTTP/2 and HTTP/3 support

@@ -1,0 +1,163 @@
+= I, Human (Project Veracity)
+Jonathan D.A. Jewell <jonathan.jewell@open.ac.uk>
+:description: Digital trust and CAPTCHA risk audit tool
+:url-repo: https://github.com/hyperpolymath/i-human
+
+// SPDX-License-Identifier: PMPL-1.0-or-later
+// Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+
+[TIP]
+====
+**AI-Assisted Install:** Just tell any AI assistant: +
+`Set up I, Human from https://github.com/hyperpolymath/i-human` +
+The AI reads this repo, asks you a few questions, and handles everything. See <<ai-install,details below>>.
+====
+
+== What is this?
+
+**I, Human** measures your CAPTCHA risk profile and gives you actionable fixes.
+
+It doesn't bypass CAPTCHAs -- it reduces how often you're challenged by diagnosing
+the signals that trigger them: VPN/datacenter IP, timezone mismatch, webdriver
+flags, disabled cookies, unique fingerprint, and behavioral patterns.
+
+=== What it does
+
+* **Diagnose**: Pinpoints risky signals (VPN/datacenter IP, timezone mismatch,
+  webdriver flag, disabled cookies, unique fingerprint)
+* **Score**: Weighted risk composition across network, fingerprint, behavior,
+  and state categories
+* **Recommend**: Ranks fixes with clear, contextual steps
+* **Persist**: Stores results in ArangoDB (document + graph model) for pattern
+  detection across sessions
+* **Cache**: LMDB embedded caching for zero-latency IP lookups
+
+== Architecture
+
+[cols="1,2,1"]
+|===
+|Component |Technology |Role
+
+|Frontend Language
+|ReScript
+|Sound, functional-first type system for client-side signal collection
+
+|Frontend Framework
+|SvelteKit
+|Compiler-based UI framework
+
+|Frontend Runtime
+|Deno
+|Secure runtime and build tool
+
+|Backend Language
+|Elixir
+|Concurrent, fault-tolerant backend
+
+|Backend Framework
+|Phoenix
+|Web framework with real-time capabilities
+
+|Web Server
+|Bandit
+|Pure-Elixir HTTP/2 + HTTP/3 server
+
+|Configuration
+|Nickel
+|Type-safe audit rule definitions
+
+|Database
+|ArangoDB
+|Multi-model (Document + Graph) persistence
+
+|Caching
+|LMDB
+|Embedded key-value store with TTL
+|===
+
+== Quick Start
+
+[source,bash]
+----
+# Start ArangoDB
+podman-compose up -d
+
+# Backend
+cd backend
+mix deps.get
+mix phx.server
+
+# Frontend (separate terminal)
+cd frontend
+deno task dev
+----
+
+Visit http://localhost:5173 and click **Start Audit**.
+
+== ABI/FFI Standards (Hyperpolymath Universal Standard)
+
+All repos with foreign function interfaces MUST follow this standard:
+
+* **ABI (Application Binary Interface)** -> **Idris2** (`src/abi/*.idr`)
+* **FFI (Foreign Function Interface)** -> **Zig** (`ffi/zig/src/*.zig`)
+* **Generated C Headers** -> Auto-generated from Idris2 ABI (`generated/abi/*.h`)
+
+**See:** `ABI-FFI-README.md` for complete documentation
+
+== License
+
+PMPL-1.0-or-later -- see link:LICENSE[LICENSE] for full text.
+
+Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+
+[[ai-install]]
+== AI-Assisted Installation
+
+**You don't need to read this README to get started.** Just say this to any AI:
+
+[source,text]
+----
+Set up I, Human from https://github.com/hyperpolymath/i-human
+----
+
+The URL is the spec. The AI fetches this repo, reads `docs/AI_INSTALLATION_GUIDE.adoc`,
+and handles everything -- prerequisites, build, config, verification.
+
+== Dependencies
+
+[cols="1,2,1"]
+|===
+|Library |Purpose |Status
+
+|Elixir 1.15+
+|Backend runtime
+|Required
+
+|Phoenix 1.7+
+|Web framework
+|Required
+
+|Bandit 1.3+
+|HTTP server
+|Required
+
+|ArangoDB 3.11+
+|Document + Graph database
+|Required
+
+|Nickel CLI
+|Rule configuration export
+|Optional (fallback to defaults)
+
+|Deno
+|Frontend runtime and build
+|Required
+
+|ReScript
+|Frontend type-safe language
+|Required
+
+|SvelteKit
+|Frontend framework
+|Required
+|===

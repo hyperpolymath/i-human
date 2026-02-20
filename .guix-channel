@@ -1,0 +1,22 @@
+;; SPDX-License-Identifier: PMPL-1.0-or-later
+;; Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+;;
+;; Guix channel definition for I, Human
+;;
+;; To use this channel, add to ~/.config/guix/channels.scm:
+;;
+;;   (channel
+;;     (name 'I, Human)
+;;     (url "https://github.com/hyperpolymath/I, Human")
+;;     (branch "main"))
+;;
+;; Then: guix pull
+
+(channel
+  (version 0)
+  (url "https://github.com/hyperpolymath/I, Human")
+  (dependencies
+   (channel
+     (name 'guix)
+     (url "https://git.savannah.gnu.org/git/guix.git")
+     (branch "master"))))

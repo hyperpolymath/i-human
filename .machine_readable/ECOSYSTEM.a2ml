@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: PMPL-1.0-or-later
+# Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+#
+# ECOSYSTEM.a2ml — Project ecosystem position
+# Relationships, dependencies, integration points.
+
+[metadata]
+version = "0.1.0"
+last-updated = "2026-02-20"
+
+[project]
+name = "I, Human"
+purpose = "Digital trust and CAPTCHA risk audit tool"
+role = "service"  # web service (frontend + backend)
+
+[position-in-ecosystem]
+tier = "1"  # standalone product
+
+[related-projects]
+# relationship types: sibling-standard, dependency, dependent, inspiration, potential-consumer
+- { name = "hypatia", relationship = "potential-consumer" }
+- { name = "panic-attacker", relationship = "sibling-standard" }
+- { name = "verisimdb", relationship = "potential-consumer" }
+
+[integration-points]
+- { system = "arangodb", direction = "outbound", protocol = "http/aql" }
+- { system = "ip-api.com", direction = "outbound", protocol = "http/json" }
+- { system = "abuseipdb", direction = "outbound", protocol = "http/json" }
+- { system = "gitbot-fleet", direction = "outbound", protocol = "repository_dispatch" }
