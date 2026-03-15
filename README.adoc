@@ -1,4 +1,4 @@
-= I, Human (Project Veracity)
+= I, Human
 Jonathan D.A. Jewell <jonathan.jewell@open.ac.uk>
 :description: Digital trust and CAPTCHA risk audit tool
 :url-repo: https://github.com/hyperpolymath/i-human
