@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: PMPL-1.0-or-later
+# Clade declaration — part of the gv-clade-index registry
+# See: https://github.com/hyperpolymath/gv-clade-index
+
+[identity]
+uuid = "584ee6e8-c000-5ee9-8212-cc0d00ac8b81"
+primary-forge = "github"
+primary-owner = "hyperpolymath"
+canonical-name = "i-human"
+prefixed-name = "ax-i-human"
+
+[clade]
+primary = "ax"
+secondary = []
+assigned = "2026-03-16"
+rationale = ""
+
+[forges]
+github = "hyperpolymath/i-human"
+gitlab = "hyperpolymath/i-human"
+bitbucket = "hyperpolymath/i-human"
+
+[lineage]
+type = "standalone"
+parent = "Human-AI interaction framework"
+born = "2026-03-16"
