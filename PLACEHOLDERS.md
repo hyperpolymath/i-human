@@ -18,7 +18,7 @@ validates the result, and runs k9-svc checks if available.
 # If you prefer manual replacement (run from repo root)
 
 sed -i 's/Jonathan D.A. Jewell/Jane Doe/g' $(grep -rl 'Jonathan D.A. Jewell' .)
-sed -i 's/jonathan.jewell@open.ac.uk/jane@example.org/g' $(grep -rl 'jonathan.jewell@open.ac.uk' .)
+sed -i 's/j.d.a.jewell@open.ac.uk/jane@example.org/g' $(grep -rl 'j.d.a.jewell@open.ac.uk' .)
 sed -i 's/hyperpolymath/my-org/g' $(grep -rl 'hyperpolymath' .)
 sed -i 's/I, Human/my-project/g' $(grep -rl 'I, Human' .)
 sed -i 's/I_HUMAN/MY_PROJECT/g' $(grep -rl 'I_HUMAN' .)
@@ -36,7 +36,7 @@ sed -i "s/2026-02-20/$(date +%Y-%m-%d)/g" $(grep -rl '2026-02-20' .)
 | Placeholder | Description | Example | Files |
 |---|---|---|---|
 | `Jonathan D.A. Jewell` | Full legal name | `Jane Doe` | SPDX headers (all files), MAINTAINERS.md, .mailmap, .reuse/dep5, docs/AI-CONVENTIONS.md |
-| `jonathan.jewell@open.ac.uk` | Primary contact email | `jane@example.org` | SPDX headers (all files), .mailmap, .reuse/dep5, .well-known/humans.txt |
+| `j.d.a.jewell@open.ac.uk` | Primary contact email | `jane@example.org` | SPDX headers (all files), .mailmap, .reuse/dep5, .well-known/humans.txt |
 | `jonathan.jewell@gmail.com` | Previous/secondary email (for .mailmap) | `old@example.com` | .mailmap |
 | `The Open University` | Author's organization/affiliation | `Acme University` | project-metadata.k9.ncl |
 | `Jewell` | Author surname (for citations) | `Doe` | docs/CITATIONS.adoc |
@@ -67,11 +67,11 @@ sed -i "s/2026-02-20/$(date +%Y-%m-%d)/g" $(grep -rl '2026-02-20' .)
 
 | Placeholder | Description | Example | Files |
 |---|---|---|---|
-| `jonathan.jewell@open.ac.uk` | Security contact email | `security@example.org` | SECURITY.md |
+| `j.d.a.jewell@open.ac.uk` | Security contact email | `security@example.org` | SECURITY.md |
 | `[PGP fingerprint not set]` | 40-char PGP fingerprint | `ABCD 1234 ...` | SECURITY.md |
 | `{{PGP_KEY_URL}}` | URL to public PGP key | `https://keys.openpgp.org/...` | SECURITY.md |
 | `https://github.com/hyperpolymath/i-human` | Project website | `https://example.org` | SECURITY.md |
-| `jonathan.jewell@open.ac.uk` | Conduct reports email | `conduct@example.org` | CODE_OF_CONDUCT.md |
+| `j.d.a.jewell@open.ac.uk` | Conduct reports email | `conduct@example.org` | CODE_OF_CONDUCT.md |
 | `Code of Conduct Committee` | Conduct committee name | `Code of Conduct Committee` | CODE_OF_CONDUCT.md |
 | `48 hours` | SLA for initial response | `48 hours` | CODE_OF_CONDUCT.md |
 

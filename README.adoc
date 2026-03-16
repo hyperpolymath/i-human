@@ -1,10 +1,10 @@
 = I, Human
-Jonathan D.A. Jewell <jonathan.jewell@open.ac.uk>
+Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 :description: Digital trust and CAPTCHA risk audit tool
 :url-repo: https://github.com/hyperpolymath/i-human
 
 // SPDX-License-Identifier: PMPL-1.0-or-later
-// Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+// Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <j.d.a.jewell@open.ac.uk>
 
 [TIP]
 ====
@@ -108,7 +108,7 @@ All repos with foreign function interfaces MUST follow this standard:
 
 PMPL-1.0-or-later -- see link:LICENSE[LICENSE] for full text.
 
-Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <jonathan.jewell@open.ac.uk>
+Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <j.d.a.jewell@open.ac.uk>
 
 [[ai-install]]
 == AI-Assisted Installation
