@@ -68,7 +68,7 @@ sed -i "s/2026-02-20/$(date +%Y-%m-%d)/g" $(grep -rl '2026-02-20' .)
 | Placeholder | Description | Example | Files |
 |---|---|---|---|
 | `jonathan.jewell@open.ac.uk` | Security contact email | `security@example.org` | SECURITY.md |
-| `{{PGP_FINGERPRINT}}` | 40-char PGP fingerprint | `ABCD 1234 ...` | SECURITY.md |
+| `[PGP fingerprint not set]` | 40-char PGP fingerprint | `ABCD 1234 ...` | SECURITY.md |
 | `{{PGP_KEY_URL}}` | URL to public PGP key | `https://keys.openpgp.org/...` | SECURITY.md |
 | `https://github.com/hyperpolymath/i-human` | Project website | `https://example.org` | SECURITY.md |
 | `jonathan.jewell@open.ac.uk` | Conduct reports email | `conduct@example.org` | CODE_OF_CONDUCT.md |
