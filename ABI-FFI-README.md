@@ -373,7 +373,7 @@ When modifying the ABI/FFI:
 
 ## License
 
-PMPL-1.0-or-later
+MPL-2.0
 
 ## See Also
 

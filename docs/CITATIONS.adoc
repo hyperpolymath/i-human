@@ -10,7 +10,7 @@
   title = {I, Human},
   year = {2026},
   url = {https://github.com/hyperpolymath/I, Human},
-  license = {PMPL-1.0-or-later}
+  license = {MPL-2.0}
 }
 ----
 
