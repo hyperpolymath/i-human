@@ -1,23 +1,5 @@
 # Security Policy
 
-<!-- 
-============================================================================
-TEMPLATE INSTRUCTIONS (delete this block before publishing)
-============================================================================
-Replace all {{PLACEHOLDER}} values with your information:
-  I, Human     - Your project name
-  hyperpolymath            - GitHub username or org (e.g., hyperpolymath)
-  i-human             - Repository name
-  j.d.a.jewell@open.ac.uk   - Security contact email
-  TBD  - Your PGP key fingerprint (40 chars, no spaces)
-  TBD      - URL to your public PGP key
-  https://github.com/hyperpolymath/i-human          - Your website/domain
-  2026     - Current year for copyright
-
-Optional: Remove sections that don't apply (e.g., PGP if you don't use it)
-============================================================================
--->
-
 We take security seriously. We appreciate your efforts to responsibly disclose vulnerabilities and will make every effort to acknowledge your contributions.
 
 ## Table of Contents
