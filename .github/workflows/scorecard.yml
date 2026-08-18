@@ -1,5 +1,11 @@
-# SPDX-License-Identifier: MPL-2.0
-name: Scorecards supply-chain security
+# SPDX-License-Identifier: PMPL-1.0
+name: OSSF Scorecard
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
 
 on:
   branch_protection_rule:
