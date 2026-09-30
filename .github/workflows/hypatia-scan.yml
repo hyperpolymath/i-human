@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
+# This workflow is managed by gh actions-lock.
 # Hypatia Neurosymbolic CI/CD Security Scan
 name: Hypatia Security Scan
 
